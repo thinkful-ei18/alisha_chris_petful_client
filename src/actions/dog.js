@@ -6,8 +6,9 @@ export const fetchDogRequest = () => ({
 });
 
 export const FETCH_DOG_SUCCESS = 'FETCH_DOG_SUCCESS'; 
-export const fetchDogSuccess = () => ({
+export const fetchDogSuccess = data => ({
   type: FETCH_DOG_SUCCESS,
+  data
 });
 
 export const FETCH_DOG_ERROR = 'FETCH_DOG_ERROR'; 
