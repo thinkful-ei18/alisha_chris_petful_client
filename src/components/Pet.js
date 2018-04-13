@@ -6,7 +6,6 @@ class Pet extends Component {
   }
 
   render() {
-
     return(
       <section>
           <h1> 

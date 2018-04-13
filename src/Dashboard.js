@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import Pet from './components/Pet'
-import { fetchCat, fetchDog } from './actions';
+import { fetchCat, fetchDog, adoptDog, adoptCat } from './actions';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -18,17 +18,24 @@ class Dashboard extends Component {
   }
 
   render() {
-    const onAdoptPet = () => {
-      console.log('hello')
+    const onAdoptPet = (animal) => {
+      if (animal === 'cat') {
+        console.log('cat')
+        this.props.dispatch(adoptCat());
+      } else if (animal === 'dog') {
+        this.props.dispatch(adoptDog());
+      }
     }
 
     return(
       <div>
-        <Pet animalData={this.props.catToAdopt.data}
-          onAdopt={event => onAdoptPet()}
+        <Pet
+          animalData={this.props.catToAdopt.data}
+          onAdopt={event => onAdoptPet('cat')}
         />
-        <Pet animalData={this.props.dogToAdopt.data}
-          onAdopt={event => onAdoptPet()}
+        <Pet 
+          animalData={this.props.dogToAdopt.data}
+          onAdopt={event => onAdoptPet('dog')}
         />
       </div>
     );

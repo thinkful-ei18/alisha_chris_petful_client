@@ -37,7 +37,7 @@ export const adoptDog = dog => (dispatch) => {
     .then(res => {
       return res.json();
     })
-    .then(() => {
-      fetchDog();
+    .then(dog => {
+      dispatch(fetchDogSuccess(dog));
     })
 }

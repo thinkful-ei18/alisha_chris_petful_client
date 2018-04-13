@@ -37,7 +37,7 @@ export const adoptCat = cat => (dispatch) => {
     .then(res => {
       return res.json();
     })
-    .then(() => {
-      fetchCat();
+    .then(cat => {
+      dispatch(fetchCatSuccess(cat));
     })
 }
