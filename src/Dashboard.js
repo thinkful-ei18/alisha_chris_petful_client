@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import Pet from './components/Pet'
+import fetchCat from './actions';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -9,6 +10,10 @@ class Dashboard extends Component {
     this.state = {
 
     }
+  }
+  
+  componentDidMount() {
+    this.props.dispatch(fetchCat);
   }
 
   render() {
@@ -28,7 +33,6 @@ class Dashboard extends Component {
       </div>
     );
   }
-
 }
 
 const mapStateToProps = state => ({
