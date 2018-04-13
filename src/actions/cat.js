@@ -22,7 +22,6 @@ export const fetchCat = cat => (dispatch) => {
     method: 'GET',
   })
     .then(res => {
-      console.log('hi');
       return res.json();
     })
     .then(cat => {

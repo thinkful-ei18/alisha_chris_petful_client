@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import Pet from './components/Pet'
-import fetchCat from './actions';
+import { fetchCat, fetchDog } from './actions';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -13,11 +13,11 @@ class Dashboard extends Component {
   }
   
   componentDidMount() {
-    this.props.dispatch(fetchCat);
+    this.props.dispatch(fetchCat());
+    this.props.dispatch(fetchDog());
   }
 
   render() {
-    console.log(this.props);
     const onAdoptPet = () => {
       console.log('hello')
     }
