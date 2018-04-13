@@ -20,7 +20,6 @@ class Dashboard extends Component {
   render() {
     const onAdoptPet = (animal) => {
       if (animal === 'cat') {
-        console.log('cat')
         this.props.dispatch(adoptCat());
       } else if (animal === 'dog') {
         this.props.dispatch(adoptDog());
