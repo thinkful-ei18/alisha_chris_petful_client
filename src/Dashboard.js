@@ -4,14 +4,13 @@ import Pet from './components/Pet'
 class Dashboard extends Component {
   constructor(props) {
     super(props);
-  }
-
-  onAdoptPet() {
     
+    this.state = {
+      
+    }
   }
 
   render() {
-
     const onAdoptPet = () => {
       console.log('hello')
     }
