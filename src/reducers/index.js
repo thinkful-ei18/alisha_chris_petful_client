@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import * as catReducer from './cat'
-import * as dogReducer from './dog'
+import catReducer from './cat'
+import dogReducer from './dog'
 
 
 const rootReducer = combineReducers({

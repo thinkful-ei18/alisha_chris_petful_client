@@ -1,5 +1,4 @@
 import FETCH_CAT_SUCCESS from '../actions'
-// import { FETCH_CAT_SUCCESS } from '../actions/cat'
 
 const initialState = {
   data: {
@@ -15,7 +14,7 @@ const initialState = {
   loading: false
 }
 
-export const dogReducer = (state=initialState, action) => {
+export const catReducer = (state=initialState, action) => {
 
   if (action.type === FETCH_CAT_SUCCESS) {
     return {
@@ -28,4 +27,4 @@ export const dogReducer = (state=initialState, action) => {
   return state;
 }
 
-export default dogReducer;
+export default catReducer;
