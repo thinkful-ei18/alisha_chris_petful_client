@@ -6,8 +6,9 @@ export const fetchCatRequest = () => ({
 });
 
 export const FETCH_CAT_SUCCESS = 'FETCH_CAT_SUCCESS'; 
-export const fetchCatSuccess = () => ({
+export const fetchCatSuccess = cat => ({
   type: FETCH_CAT_SUCCESS,
+  cat
 });
 
 export const FETCH_CAT_ERROR = 'FETCH_CAT_ERROR'; 
