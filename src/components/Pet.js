@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 class Pet extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -27,7 +26,10 @@ class Pet extends Component {
               <dt>Story: </dt>
               <dd>{this.props.animalData.story}</dd>
             </dl>
-            <button>Adopt</button>
+            <button onClick={event => {
+              event.preventDefault();
+              this.props.onAdopt();
+            }}>Adopt</button>
           </main>
 
         </section>
